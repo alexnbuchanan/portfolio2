@@ -1,11 +1,11 @@
 body{
   padding: 0;
   margin: 0;
-  background: #ffd200;
+
 }
-h2{
-  font-size: 6em;
-  width: 90%;
+.mainText{
+  font-size: 4em;
+  width: 65%;
   margin: 0;
   padding: 0;
   /* text-align: center; */
@@ -14,5 +14,22 @@ h2{
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  background-color:  red
+
+}
+img {
+  position: absolute;
+  width: 600px;
+  /* height: 400px; */
+  object-fit: cover;
+  transform: translateX(-50%) translateY(-50%);
+  top: 25%;
+  left: 20%;
+  z-index: -10;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.tiger{
+  width: 550px;
 }
