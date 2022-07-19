@@ -25,6 +25,43 @@
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
     <script src="js/grained.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/clementroche/motion-hover-effects/js/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/clementroche/motion-hover-effects/js/TweenLite.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/clementroche/motion-hover-effects/js/Math.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/clementroche/motion-hover-effects/js/EffectShell.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/clementroche/motion-hover-effects/js/RGBShiftEffect.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/clementroche/motion-hover-effects/js/imagesloaded.pkgd.min.js"></script> -->
+  <script src="js/three.min.js"></script>
+    <script src="js/TweenLite.min.js"></script>
+	<script src="js/Math.js"></script>
+	<script src="js/EffectShell.js"></script>
+	<script src="js/RGBShiftEffect.js"></script>
+	<script src="js/imagesloaded.pkgd.min.js"></script>
+  <script>
+    window.onload = function(){
+      const container = document.body;
+	const itemsWrapper = document.querySelector('.mainText');
+  // const itemsWrapper2 = document.querySelector('.item2')
+  // console.log(container,itemsWrapper2);
+
+    // Preload images
+    const preloadImages = () => {
+        return new Promise((resolve, reject) => {
+            imagesLoaded(document.querySelectorAll('.mainText img'), resolve);
+        });
+    };
+    // And then..
+    preloadImages().then(() => {
+        // Remove the loader
+        console.log('images loaded')
+        // document.body.classList.remove('loading');
+        new RGBShiftEffect(container, itemsWrapper, { strength: 0.25 });
+        // new RGBShiftEffect(container, itemsWrapper2, { strength: 0.25 })
+      
+	});
+    }
+
+  </script>
     <title>React App</title>
   </head>
   <body>
