@@ -21,8 +21,9 @@ function App() {
 
   return (
     <Router>
-      <Nav />
       <div id="divContainer">
+        <Nav />
+
         <Routes>
           <Route path="/about" element={<About />} />
           <Route path="/" exact element={<Home />} />

@@ -3,9 +3,10 @@
 body{
   padding: 0;
   margin: 0;
+
 }
 .mainText{
-  font-size: 4em;
+  font-size: 3em;
   width: 65%;
   margin: 0;
   padding: 0;
@@ -17,6 +18,8 @@ body{
   transform: translateX(-50%) translateY(-50%);
 
 }
+
+
 img {
   position: absolute;
   visibility: hidden;
@@ -42,3 +45,9 @@ canvas {
 
 }
 
+.fontStyle{
+  margin-left: 100px;
+  font-size: 70px;
+ margin-bottom: 90px;
+  /* color: #f9cdcd */
+}

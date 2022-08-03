@@ -120,6 +120,7 @@
     doc.body.appendChild(style);
 
     //add custimozed style
+
     var styleAdded = doc.getElementById("grained-animation-" + elementId);
     if (styleAdded) {
       styleAdded.parentElement.removeChild(styleAdded);
