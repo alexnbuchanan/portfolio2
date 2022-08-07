@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
@@ -57,21 +58,34 @@ export default function Home() {
                 <u style={{ textDecorationThickness: "1px", float: "right" }}>
                   Los Angeles, CA
                 </u>
-                <img src="/images/la_city_hall.jpg" />
+                <img src="/images/LA_Freeway.jpg" />
               </a>
             </div>
           </div>
         </div>
       </div>
 
-      <div ref={backColor} className="fontStyle">
-        <h1>Soundspace App</h1>
+      <div ref={backColor}>
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/soundspace"
+        >
+          <h2 className="fontStyle">Soundspace App</h2>
+        </Link>
 
-        <h1>Social Media App</h1>
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/soundspaceux"
+        >
+          <h2 className="fontStyle"> Soundspace UX/UI</h2>
+        </Link>
 
-        <h1>Ecommerce site</h1>
-
-        <h1> Soundspace UX/UI</h1>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/social">
+          <h2 className="fontStyle">Social Media App</h2>
+        </Link>
+        <Link style={{ textDecoration: "none", color: "black" }} to="/ecomm">
+          <h2 className="fontStyle">Ecommerce App</h2>
+        </Link>
       </div>
     </div>
   );
