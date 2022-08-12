@@ -1,17 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import PopUpModal from "./PopUpModal.js";
 
 export default function Soundspaceux() {
+  const [open, setOpen] = useState(false);
+  const handleClose = () => setOpen(false);
+  console.log("ODOWDOWQ", open);
   return (
     <div id="container" style={{}}>
       <div class="grid-container" style={{ height: "100%" }}>
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
-          <img
-            src="/images/competitive_analysis.png"
-            className="visibleImage"
-            alt=""
-          />
-
           <h1>Soundspace UX/UI</h1>
 
           <p>
@@ -69,6 +67,18 @@ export default function Soundspaceux() {
               marketplace for booking/listing spaces, but none of them focus on
               spaces dedicated to music.
             </p>
+            <img
+              src="/images/competitive_analysis2.png"
+              className="visibleImage"
+              width="1200px"
+              alt=""
+              onClick={() => setOpen(true)}
+            />
+            <PopUpModal
+              open={open}
+              handleClose={handleClose}
+              img={"/images/competitive_analysis2.png"}
+            />
           </div>
           <div>test4</div>
           <div>test5</div>

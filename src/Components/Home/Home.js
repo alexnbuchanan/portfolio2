@@ -36,31 +36,31 @@ export default function Home() {
     window.scrollTo(0, 0);
   };
 
-  const clearElements = () => {
-    const arrClass = [
-      "gsap-marker-end",
-      "gsap-marker-start",
-      "gsap-marker-scroller-end",
-      "gsap-marker-scroller-start",
-    ];
-    const arrTags = ["loom-container", "canvas"];
-    arrClass.forEach((item) => {
-      const arrElem = [...document.querySelectorAll("." + item)];
-      deleteElements(arrElem);
-    });
-    arrTags.forEach((item) => {
-      const arrElem = [...document.querySelectorAll(item)];
-      deleteElements(arrElem);
-    });
-  };
+  // const clearElements = () => {
+  //   const arrClass = [
+  //     "gsap-marker-end",
+  //     "gsap-marker-start",
+  //     "gsap-marker-scroller-end",
+  //     "gsap-marker-scroller-start",
+  //   ];
+  //   const arrTags = ["loom-container", "canvas"];
+  //   arrClass.forEach((item) => {
+  //     const arrElem = [...document.querySelectorAll("." + item)];
+  //     deleteElements(arrElem);
+  //   });
+  //   arrTags.forEach((item) => {
+  //     const arrElem = [...document.querySelectorAll(item)];
+  //     deleteElements(arrElem);
+  //   });
+  // };
 
-  const deleteElements = (arrElem) => {
-    if (arrElem) {
-      arrElem.forEach((element) => {
-        element.remove();
-      });
-    }
-  };
+  // const deleteElements = (arrElem) => {
+  //   if (arrElem) {
+  //     arrElem.forEach((element) => {
+  //       element.remove();
+  //     });
+  //   }
+  // };
 
   return (
     <div>
