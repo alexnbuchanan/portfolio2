@@ -29,6 +29,39 @@ export default function Home() {
     });
   }, []);
 
+  const changeRoute = (event) => {
+    //document.body.style.backgroundColor = "#FFFFFF";
+    //history.push("/" + route);
+    clearElements();
+    window.scrollTo(0, 0);
+  };
+
+  const clearElements = () => {
+    const arrClass = [
+      "gsap-marker-end",
+      "gsap-marker-start",
+      "gsap-marker-scroller-end",
+      "gsap-marker-scroller-start",
+    ];
+    const arrTags = ["loom-container", "canvas"];
+    arrClass.forEach((item) => {
+      const arrElem = [...document.querySelectorAll("." + item)];
+      deleteElements(arrElem);
+    });
+    arrTags.forEach((item) => {
+      const arrElem = [...document.querySelectorAll(item)];
+      deleteElements(arrElem);
+    });
+  };
+
+  const deleteElements = (arrElem) => {
+    if (arrElem) {
+      arrElem.forEach((element) => {
+        element.remove();
+      });
+    }
+  };
+
   return (
     <div>
       <div id="container" style={{ height: "calc(100vh - 50px)" }}>
@@ -42,7 +75,13 @@ export default function Home() {
                 draggable="false"
                 className="link w-inline-block"
               >
-                <u style={{ textDecorationThickness: "1px" }}>Alex Buchanan</u>
+                <u
+                  style={{
+                    textDecorationThickness: "1px",
+                  }}
+                >
+                  Alex Buchanan
+                </u>
                 <img src="/images/zlatan.jpg" />
               </a>
             </div>{" "}
@@ -55,7 +94,13 @@ export default function Home() {
                 draggable="false"
                 className="link w-inline-block"
               >
-                <u style={{ textDecorationThickness: "1px", float: "right" }}>
+                <u
+                  style={{
+                    textDecorationThickness: "1px",
+
+                    float: "right",
+                  }}
+                >
                   Los Angeles, CA
                 </u>
                 <img src="/images/LA_Freeway.jpg" />
@@ -69,6 +114,7 @@ export default function Home() {
         <Link
           style={{ textDecoration: "none", color: "black" }}
           to="/soundspace"
+          onClick={changeRoute}
         >
           <h2 className="fontStyle">Soundspace App</h2>
         </Link>
@@ -76,14 +122,23 @@ export default function Home() {
         <Link
           style={{ textDecoration: "none", color: "black" }}
           to="/soundspaceux"
+          onClick={changeRoute}
         >
           <h2 className="fontStyle"> Soundspace UX/UI</h2>
         </Link>
 
-        <Link style={{ textDecoration: "none", color: "black" }} to="/social">
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/social"
+          onClick={changeRoute}
+        >
           <h2 className="fontStyle">Social Media App</h2>
         </Link>
-        <Link style={{ textDecoration: "none", color: "black" }} to="/ecomm">
+        <Link
+          style={{ textDecoration: "none", color: "black" }}
+          to="/ecomm"
+          onClick={changeRoute}
+        >
           <h2 className="fontStyle">Ecommerce App</h2>
         </Link>
       </div>
