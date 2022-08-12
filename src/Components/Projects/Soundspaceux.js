@@ -4,7 +4,8 @@ import PopUpModal from "./PopUpModal.js";
 export default function Soundspaceux() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
-  console.log("ODOWDOWQ", open);
+  const [imgIndex, setImgIndex] = useState("");
+
   return (
     <div id="container" style={{}}>
       <div class="grid-container" style={{ height: "100%" }}>
@@ -70,18 +71,166 @@ export default function Soundspaceux() {
             <img
               src="/images/competitive_analysis2.png"
               className="visibleImage"
-              width="1200px"
+              width="900px"
               alt=""
-              onClick={() => setOpen(true)}
+              onClick={() => {
+                setOpen(true), setImgIndex(0);
+              }}
             />
-            <PopUpModal
-              open={open}
-              handleClose={handleClose}
-              img={"/images/competitive_analysis2.png"}
-            />
+            {imgIndex === 0 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/competitive_analysis2.png"}
+              />
+            )}
           </div>
-          <div>test4</div>
-          <div>test5</div>
+          <div>
+            <h4>User Survey</h4>
+            <p>
+              I conducted a user survey in order to better understand my target
+              audience (musicians who rent rehearsal spaces) and identify any
+              pain points in their current experience renting rehearsal spaces.
+              <br />
+              <br />
+              The biggest takeaways are that a fifth of those who currently rent
+              a rehearsal space are unsatisfied with the security, equipment and
+              soundproofing available at their current location. Furthermore, of
+              those who currently don’t rent a rehearsal space, 50% note cost as
+              the biggest barrier.
+            </p>
+            <img
+              src="/images/user_surveys.png"
+              className="visibleImage"
+              width="800px"
+              alt=""
+              onClick={() => {
+                setOpen(true), setImgIndex(1);
+              }}
+            />
+            {imgIndex === 1 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/user_surveys.png"}
+              />
+            )}
+          </div>
+          <div>
+            <h4>User Personas</h4>
+            <p>
+              Using the user research, I created user personas to represent my
+              target audience. These personas helped me focus on the end user
+              and keep them top of mind when designing the product. I wanted to
+              be sure that in the end, the final product would truly address
+              their needs.
+            </p>
+            <img
+              src="/images/user_personas.png"
+              className="visibleImage"
+              width="900px"
+              alt=""
+              onClick={() => {
+                setOpen(true), setImgIndex(2);
+              }}
+            />
+            {imgIndex === 2 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/user_personas.png"}
+              />
+            )}
+          </div>
+          <div>
+            <h4>User Stories</h4>
+            <p>
+              With the user research and personas, I mapped out the most
+              important goals that the target audience would want to accomplish
+              while using this product. The user stories helped me outline all
+              of the possible features this app would need to cover as well as
+              organize and prioritize them by importance.
+            </p>
+            <img
+              src="/images/user_stories.png"
+              className="visibleImage"
+              width="800px"
+              alt=""
+              onClick={() => {
+                setOpen(true), setImgIndex(3);
+              }}
+            />
+            {imgIndex === 3 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/user_stories.png"}
+              />
+            )}
+          </div>
+          <div>
+            <h4>User Flows</h4>
+            <p>
+              Focusing first on the most important user stories, I created user
+              flows to map out each process. My goal was to keep each step as
+              short as possible so that the final product is simple and easy to
+              use.
+            </p>
+
+            <img
+              src="/images/user_flows.png"
+              className="visibleImage"
+              width="900px"
+              alt=""
+              onClick={() => {
+                setOpen(true), setImgIndex(4);
+              }}
+            />
+            {imgIndex === 4 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/user_flows.png"}
+              />
+            )}
+          </div>
+          <div>
+            <h4>Site Map</h4>
+
+            <div style={{ overflow: "auto" }}>
+              <div style={{ float: "right", marginRight: "150px" }}>
+                <img
+                  src="/images/site_map.png"
+                  className="visibleImage"
+                  width="500px"
+                  alt=""
+                  onClick={() => {
+                    setOpen(true), setImgIndex(5);
+                  }}
+                />
+                {imgIndex === 5 && (
+                  <PopUpModal
+                    open={open}
+                    handleClose={handleClose}
+                    img={"/images/site_map.png"}
+                    widthType={"site_map"}
+                  />
+                )}
+              </div>
+
+              <p style={{ paddingTop: "100px", width: "40%" }}>
+                With the user stories as guidance, I created a site map to
+                outline each screen of the design. I made sure that each user
+                story was represented by a screen. <br />
+                <br />
+                This site map provided a blueprint for the final product, from
+                here I could now start building each individual screen…
+              </p>
+            </div>
+          </div>
+
+          <div>test6</div>
+          <div>test6</div>
           <div>test6</div>
         </div>
 
