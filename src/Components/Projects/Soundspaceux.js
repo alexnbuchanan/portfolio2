@@ -11,8 +11,15 @@ export default function Soundspaceux() {
       <div class="grid-container" style={{ height: "100%" }}>
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
-          <h1>Soundspace UX/UI</h1>
-
+          <h1
+            style={{
+              fontFamily: "interMedium",
+              fontSize: "75px",
+              marginTop: "100px",
+            }}
+          >
+            Soundspace
+          </h1>
           <p>
             {" "}
             I designed an app called Soundspace which provides an online rental
@@ -20,43 +27,111 @@ export default function Soundspaceux() {
             equipment. I oversaw each step of the design process, from ideation
             to the final prototype.{" "}
           </p>
+          <hr
+            class="solid"
+            style={{
+              marginTop: "50px",
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <br />
+          <h2
+            style={{
+              fontSize: "50px",
+              fontFamily: "interMedium",
+            }}
+          >
+            Process...
+          </h2>
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Problem
+            </h4>
 
-          <div>
-            {" "}
-            <h4 style={{ width: "60%" }}>Problem</h4>
-            <ol>
-              <li>
-                Many musicians rent rehearsal spaces since practicing at home
-                isn’t an option due to the noise level. However, there is
-                currently no centralized platform that allows musicians to
-                easily search for, and book, rehearsal spaces in their area.
-              </li>
-
-              <li>
-                Many property owners have available space and instruments that
-                could be used by musicians. However, there are currently no
-                platforms that allow property owners to connect with, and rent
-                out, this space to musicians.
-              </li>
-            </ol>
-          </div>
-          <div>
-            {" "}
-            <h4 style={{ width: "60%" }}>Solution</h4>
-            <p>Soundspace was created to…</p>
             <p>
-              1. Provide a centralized platform that allows musicians to search
-              and compare a range of options so they can book the rehearsal
-              space that best fits their needs.
-            </p>
-            <p>
-              2. Allow property owners to rent their available space (along with
-              instruments) to musicians.
+              Many musicians rent rehearsal spaces since practicing at home
+              isn’t an option due to the noise level. However, there is
+              currently no centralized platform that allows musicians to easily
+              search for, and book, rehearsal spaces in their area.
+              <br />
+              <br />
+              Many property owners have available space and instruments that
+              could be used by musicians. However, there are currently no
+              platforms that allow property owners to connect with, and rent
+              out, this space to musicians.
             </p>
           </div>
-          <h2>Process</h2>
+          <br />
           <div>
-            <h4>Competitive Analysis</h4>
+            <div style={{ overflow: "auto" }}>
+              <div style={{ float: "right", marginRight: "150px" }}>
+                <img
+                  src="/images/solution2.png"
+                  className="visibleImage"
+                  width="250px"
+                  alt=""
+                  onClick={() => {
+                    setOpen(true), setImgIndex(99);
+                  }}
+                />
+                {imgIndex === 99 && (
+                  <PopUpModal
+                    open={open}
+                    handleClose={handleClose}
+                    img={"/images/solution2.png"}
+                    widthType={"solution2"}
+                  />
+                )}
+              </div>
+              <h4
+                style={{
+                  fontSize: "30px",
+                  fontFamily: "interMedium",
+                }}
+              >
+                Solution
+              </h4>
+              <p style={{ marginTop: "50px" }}>
+                Soundspace was created to…
+                <br />
+                <br />
+                Provide a centralized platform that allows musicians to search
+                and compare a range of options so they can book the rehearsal
+                space that best fits their needs.
+                <br />
+                <br />
+                Allow property owners to rent their available space (along with
+                instruments) to musicians.
+                <p />
+              </p>
+            </div>
+          </div>
+          <br />
+          <br />
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Competitive Analysis
+            </h4>
             <p>
               Through a competitive analysis, I discovered that there is only
               one direct competitor called Music Traveler. It’s a new company
@@ -85,8 +160,24 @@ export default function Soundspaceux() {
               />
             )}
           </div>
+          <br /> <br />
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
           <div>
-            <h4>User Survey</h4>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              User Survey
+            </h4>
             <p>
               I conducted a user survey in order to better understand my target
               audience (musicians who rent rehearsal spaces) and identify any
@@ -116,8 +207,24 @@ export default function Soundspaceux() {
               />
             )}
           </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
           <div>
-            <h4>User Personas</h4>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              User Personas
+            </h4>
             <p>
               Using the user research, I created user personas to represent my
               target audience. These personas helped me focus on the end user
@@ -142,8 +249,24 @@ export default function Soundspaceux() {
               />
             )}
           </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
           <div>
-            <h4>User Stories</h4>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              User Stories
+            </h4>
             <p>
               With the user research and personas, I mapped out the most
               important goals that the target audience would want to accomplish
@@ -168,8 +291,24 @@ export default function Soundspaceux() {
               />
             )}
           </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
           <div>
-            <h4>User Flows</h4>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              User Flows
+            </h4>
             <p>
               Focusing first on the most important user stories, I created user
               flows to map out each process. My goal was to keep each step as
@@ -194,8 +333,24 @@ export default function Soundspaceux() {
               />
             )}
           </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
           <div>
-            <h4>Site Map</h4>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Site Map
+            </h4>
 
             <div style={{ overflow: "auto" }}>
               <div style={{ float: "right", marginRight: "150px" }}>
@@ -228,14 +383,318 @@ export default function Soundspaceux() {
               </p>
             </div>
           </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Lo-Fi Prototype
+            </h4>
+            <p>
+              When it came to designing each screen, I started off with sketches
+              to outline my ideas. From there, I created lo-fi designs that
+              could be easily altered. I obviously wasn’t focused with
+              aesthetics at this stage, but rather just making sure the user
+              flows were being conveyed.
+            </p>
 
-          <div>test6</div>
-          <div>test6</div>
-          <div>test6</div>
+            <img
+              src="/images/lofi_prototype.png"
+              className="visibleImage"
+              width="700px"
+              alt=""
+              onClick={() => {
+                setOpen(true), setImgIndex(6);
+              }}
+            />
+            {imgIndex === 6 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/lofi_prototype.png"}
+                widthType={"lofi_prototype"}
+              />
+            )}
+          </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Brand Identity
+            </h4>
+
+            <div style={{ overflow: "auto" }}>
+              <div style={{ float: "right", marginRight: "80px" }}>
+                <img
+                  src="/images/brand_id.png"
+                  className="visibleImage"
+                  width="500px"
+                  alt=""
+                  onClick={() => {
+                    setOpen(true), setImgIndex(7);
+                  }}
+                />
+                {imgIndex === 7 && (
+                  <PopUpModal
+                    open={open}
+                    handleClose={handleClose}
+                    img={"/images/brand_id.png"}
+                    widthType={"brand_id"}
+                  />
+                )}
+              </div>
+
+              <p style={{ paddingTop: "100px", width: "40%" }}>
+                With the lo-fi designs in place, I needed a brand identity that
+                would inform the final design of the prototype. As such, I
+                created a style guide which outlined the design standards for
+                this product. <br />
+                <br />I went back to my initial user research and noted that my
+                core audience are younger, male and into rock music. I tried to
+                use colors, fonts and styles that would appeal to this
+                demographic.
+              </p>
+            </div>
+          </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Hi-Fi Prototypes
+            </h4>
+
+            <div style={{ overflow: "auto" }}>
+              <div style={{ float: "left", marginRight: "" }}>
+                <img
+                  src="/images/highfi_prototype.png"
+                  className="visibleImage"
+                  width="500px"
+                  alt=""
+                  onClick={() => {
+                    setOpen(true), setImgIndex(8);
+                  }}
+                />
+                {imgIndex === 8 && (
+                  <PopUpModal
+                    open={open}
+                    handleClose={handleClose}
+                    img={"/images/highfi_prototype.png"}
+                    widthType={"hifi"}
+                  />
+                )}
+              </div>
+
+              <p style={{ float: "right", paddingTop: "100px", width: "40%" }}>
+                With the style guide in hand, I was able to transform the lo-fi
+                designs into fully realized designs. <br />
+                <br />
+                Throughout the design process, I made sure to keep all elements
+                consistent: button sizes, colors, margins, fonts etc.
+              </p>
+            </div>
+          </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Prototype and User Testing
+            </h4>
+            <p>
+              With the hi-fi prototype ready, I conduced usability tests with
+              three respondents. The tests revealed blind spots and areas for
+              improvement. The tests led to changes throughout my product that
+              greatly improved it.
+            </p>
+
+            <img
+              src="/images/user_testing.png"
+              className="visibleImage"
+              width="1000px"
+              alt=""
+              onClick={() => {
+                setOpen(true), setImgIndex(9);
+              }}
+            />
+            {imgIndex === 9 && (
+              <PopUpModal
+                open={open}
+                handleClose={handleClose}
+                img={"/images/user_testing.png"}
+                widthType={"user_testing"}
+              />
+            )}
+          </div>
+          <br /> <br />{" "}
+          <hr
+            class="solid"
+            style={{
+              height: ".5px",
+              backgroundColor: "#D9D9D9",
+              border: "none",
+            }}
+          />
+          <div>
+            <h4
+              style={{
+                fontSize: "30px",
+                fontFamily: "interMedium",
+              }}
+            >
+              Final Updates
+            </h4>
+            <div style={{ overflow: "auto" }}>
+              <div style={{ float: "right", marginRight: "80px" }}>
+                <img
+                  src="/images/final.png"
+                  className="visibleImage"
+                  width="500px"
+                  alt=""
+                  onClick={() => {
+                    setOpen(true), setImgIndex(10);
+                  }}
+                />
+                {imgIndex === 10 && (
+                  <PopUpModal
+                    open={open}
+                    handleClose={handleClose}
+                    img={"/images/final.png"}
+                    widthType={"final"}
+                  />
+                )}
+              </div>
+
+              <p style={{ paddingTop: "100px", width: "40%" }}>
+                After conducting user tests, I had enough feedback to make my
+                final updates. Some of the biggest updates included*:
+                <br />
+                <br />
+                Making key buttons more accessible (static)
+                <br />
+                <br /> Removing duplicative buttons
+                <br />
+                <br /> Making the user review section easier to understand
+                <br />
+                <br />
+                Making text and confirmation screens more clear
+                <br />
+                <br /> However a secondary round of User Testing led to one more
+                major update: increasing the size of buttons (and making some
+                minor color adjustments) for greater mobile accessibility.
+              </p>
+            </div>
+            <br /> <br />{" "}
+            <hr
+              class="solid"
+              style={{
+                height: ".5px",
+                backgroundColor: "#D9D9D9",
+                border: "none",
+              }}
+            />
+            <div>
+              <h4
+                style={{
+                  fontSize: "30px",
+                  fontFamily: "interMedium",
+                }}
+              >
+                Final thoughts
+              </h4>
+              <p>
+                I’m really happy with the way this project turned out. One of
+                the biggest goals I had with this project was creating a UI that
+                looks modern and fresh. I felt that my last project looked dated
+                in terms of the UI and I knew I wanted to improve in this area.
+                <br />
+                <br />
+                I was also happy that the product concept itself generated a lot
+                of interest and excitement from survey takers and usability test
+                respondents. I’m really happy that I was able to receive
+                feedback directly from my target audience (musicians) since they
+                were able to provide deep insight into their needs and pain
+                points. In the end, I was able to collect so much great feedback
+                which led to critical insights and improvements to the overall
+                product.
+                <br />
+                <br />
+                One mistake I think I made was not interviewing any of my user
+                survey respondents. I think this would have been really valuable
+                to help create better, more realized user personas and provided
+                more insights. Instead, I used just my user survey data to
+                create the personas, which is fine, but I think interviews would
+                have made them even more real.
+                <br />
+                <br />
+                Overall, this project reinforced the importance of testing and
+                making iterative improvements to the product throughout the
+                design process. Next time, I want to see if there are even more
+                opportunities for testing. Looking back, I think A/B testing
+                would have been valuable to determine which UI design elements
+                and color palettes would have been most appealing to the target
+                audience.
+                <br />
+                <br />
+                <div style={{ fontWeight: "bold" }}>UPDATE 2022:</div> UI design
+                moves quickly, reflecting again I'm already noticing that some
+                elements in my design look outdated such as the rating stars. I
+                would now remove this design element and just leave the 5 star
+                rating average.
+              </p>
+            </div>
+          </div>
+          <br /> <br />
         </div>
 
         <div class="grid-item grid-item-3"></div>
       </div>
+      <br /> <br />
     </div>
   );
 }

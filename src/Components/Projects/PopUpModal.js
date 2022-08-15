@@ -11,28 +11,46 @@ export default function PopUpModal({ open, handleClose, img, widthType }) {
   //   console.log("props2", prop2);
 
   // console.log("SAASDASDAS", widthType);
-  // const widthSwitch = (widthType) => {
-  //   debugger;
-  //   switch (widthType) {
-  //     case "site_map":
-  //       return 800;
-
-  //     default:
-  //       return 1100;
-  //   }
-  // };
-
-  function widthSwitch(img) {
-    switch (img) {
+  const widthSwitch = (prop) => {
+    debugger;
+    switch (prop) {
       case "site_map":
         return "40%";
         break;
+      case "lofi_prototype":
+        return "50%";
+        break;
+      case "brand_id":
+        return "35%";
+        break;
+      case "hifi":
+        return "45%";
+        break;
+      case "user_testing":
+        return "80%";
+        break;
+      case "final":
+        return "40%";
+        break;
+      case "solution2":
+        return "20%";
+        break;
       default:
-        return 1200;
+        return 1100;
     }
-  }
+  };
 
-  const imageWidth = widthSwitch(widthType);
+  // function widthSwitch(img) {
+  //   switch (img) {
+  //     case "site_map":
+  //       return "40%";
+  //       break;
+  //     default:
+  //       return 1200;
+  //   }
+  // }
+
+  // const imageWidth = widthSwitch(widthType);
 
   console.log("IMG");
   return (
@@ -51,7 +69,7 @@ export default function PopUpModal({ open, handleClose, img, widthType }) {
             left: "50%",
             transform: "translate(-50%, -50%)",
             outline: "none",
-            width: imageWidth,
+            width: widthSwitch(widthType),
             visibility: "visible",
           }}
           src={img}
