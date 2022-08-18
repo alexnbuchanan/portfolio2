@@ -2,12 +2,13 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
-export default function Home() {
+export default function Home(props) {
   const backColor = useRef();
   const projectText = useRef();
+  const location = useLocation();
 
   useEffect(() => {
     gsap.to("body", {
@@ -27,7 +28,28 @@ export default function Home() {
         start: "top center",
       },
     });
+
+    if (location.state?.scrolled) {
+      scrollFun("projects");
+    }
   }, []);
+
+  const scrollFun = (id) => {
+    document.querySelector(`#` + id)?.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+      inline: "start",
+    });
+    // document.getElementById("#" + id).scrollTop += 1000;
+    // You can do this way
+    // const elId = "#id" + id;
+    // const element = document.querySelector(elId);
+    // element.scrollIntoView({ behavior: "smooth" });
+  };
+
+  if (document.querySelector(`#projects`) && location.state?.scrolled) {
+    scrollFun("projects");
+  }
 
   const changeRoute = (event) => {
     //document.body.style.backgroundColor = "#FFFFFF";
@@ -78,14 +100,16 @@ export default function Home() {
                 <u
                   style={{
                     textDecorationThickness: "1px",
+                    fontFamily: "ptMono",
                   }}
                 >
-                  Alex Buchanan
+                  TEST TEST
                 </u>
                 <img src="/images/zlatan.jpg" />
               </a>
             </div>{" "}
-            is a web developer based in <br />
+            TEST TEST TEST TEST TEST TEST
+            <br />
             <div className="item2" style={{ display: "inline" }}>
               <a
                 aria-label="link-1"
@@ -97,11 +121,11 @@ export default function Home() {
                 <u
                   style={{
                     textDecorationThickness: "1px",
-
                     float: "right",
+                    fontFamily: "ptMono",
                   }}
                 >
-                  Los Angeles, CA
+                  LOS ANGELES, CA
                 </u>
                 <img src="/images/LA_Freeway.jpg" />
               </a>
@@ -110,7 +134,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div ref={backColor}>
+      <div ref={backColor} id="projects">
         <Link
           style={{ textDecoration: "none", color: "black" }}
           to="/soundspace"

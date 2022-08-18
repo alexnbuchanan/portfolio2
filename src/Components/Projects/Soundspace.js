@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Soundspace() {
   return (
-    <div id="container" style={{}}>
+    <div id="container">
       <div class="grid-container" style={{ height: "100%" }}>
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">

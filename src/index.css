@@ -22,6 +22,10 @@
   font-family: 'interSemiBold';
   src: url('./font/Inter-SemiBold.ttf');
 }
+@font-face {
+  font-family: 'ptMono';
+  src: url('./font/PTMono-Regular.ttf');
+}
 
 *{
   font-family: "interRegular";

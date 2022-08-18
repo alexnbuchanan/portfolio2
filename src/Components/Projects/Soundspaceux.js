@@ -89,6 +89,21 @@ export default function Soundspaceux() {
                     widthType={"solution2"}
                   />
                 )}
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "interLight",
+                    color: "#8F8F8F",
+                  }}
+                >
+                  Click here to view{" "}
+                  <a
+                    href="https://projects.invisionapp.com/share/4AUF1VYM2ND#/screens"
+                    style={{ color: "#8F8F8F" }}
+                  >
+                    Prototype
+                  </a>
+                </div>
               </div>
               <h4
                 style={{
@@ -143,15 +158,18 @@ export default function Soundspaceux() {
               marketplace for booking/listing spaces, but none of them focus on
               spaces dedicated to music.
             </p>
-            <img
-              src="/images/competitive_analysis2.png"
-              className="visibleImage"
-              width="900px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(0);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/competitive_analysis2.png"
+                className="visibleImage"
+                width="900px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(0);
+                }}
+              />
+            </div>
             {imgIndex === 0 && (
               <PopUpModal
                 open={open}
@@ -159,6 +177,22 @@ export default function Soundspaceux() {
                 img={"/images/competitive_analysis2.png"}
               />
             )}
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://drive.google.com/open?id=1GJCUlfazlfU6Y8Xu_WYCOMX-9OCrzHMg"
+                style={{ color: "#8F8F8F" }}
+              >
+                full analysis
+              </a>
+            </div>
           </div>
           <br /> <br />
           <hr
@@ -190,15 +224,18 @@ export default function Soundspaceux() {
               those who currently don’t rent a rehearsal space, 50% note cost as
               the biggest barrier.
             </p>
-            <img
-              src="/images/user_surveys.png"
-              className="visibleImage"
-              width="800px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(1);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/user_surveys.png"
+                className="visibleImage"
+                width="800px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(1);
+                }}
+              />
+            </div>
             {imgIndex === 1 && (
               <PopUpModal
                 open={open}
@@ -206,6 +243,22 @@ export default function Soundspaceux() {
                 img={"/images/user_surveys.png"}
               />
             )}
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://drive.google.com/open?id=18HxykQoQDB-Irwc5BpB7ARvYBVkBH7pw"
+                style={{ color: "#8F8F8F" }}
+              >
+                full user survey report
+              </a>
+            </div>
           </div>
           <br /> <br />{" "}
           <hr
@@ -232,15 +285,18 @@ export default function Soundspaceux() {
               be sure that in the end, the final product would truly address
               their needs.
             </p>
-            <img
-              src="/images/user_personas.png"
-              className="visibleImage"
-              width="900px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(2);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/user_personas.png"
+                className="visibleImage"
+                width="900px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(2);
+                }}
+              />
+            </div>
             {imgIndex === 2 && (
               <PopUpModal
                 open={open}
@@ -248,6 +304,23 @@ export default function Soundspaceux() {
                 img={"/images/user_personas.png"}
               />
             )}
+
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://drive.google.com/open?id=1sBMet6QHLLFi0_L3RhkQuTmSD-5V9PbH"
+                style={{ color: "#8F8F8F" }}
+              >
+                full user personas
+              </a>
+            </div>
           </div>
           <br /> <br />{" "}
           <hr
@@ -274,15 +347,18 @@ export default function Soundspaceux() {
               of the possible features this app would need to cover as well as
               organize and prioritize them by importance.
             </p>
-            <img
-              src="/images/user_stories.png"
-              className="visibleImage"
-              width="800px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(3);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/user_stories.png"
+                className="visibleImage"
+                width="800px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(3);
+                }}
+              />
+            </div>
             {imgIndex === 3 && (
               <PopUpModal
                 open={open}
@@ -290,6 +366,22 @@ export default function Soundspaceux() {
                 img={"/images/user_stories.png"}
               />
             )}
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://drive.google.com/open?id=1_tZGhYfPeLnLx7jLrk5kA1i2OHgRQeP6"
+                style={{ color: "#8F8F8F" }}
+              >
+                all user stories
+              </a>
+            </div>
           </div>
           <br /> <br />{" "}
           <hr
@@ -315,16 +407,18 @@ export default function Soundspaceux() {
               short as possible so that the final product is simple and easy to
               use.
             </p>
-
-            <img
-              src="/images/user_flows.png"
-              className="visibleImage"
-              width="900px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(4);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/user_flows.png"
+                className="visibleImage"
+                width="900px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(4);
+                }}
+              />
+            </div>
             {imgIndex === 4 && (
               <PopUpModal
                 open={open}
@@ -332,6 +426,22 @@ export default function Soundspaceux() {
                 img={"/images/user_flows.png"}
               />
             )}
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://drive.google.com/open?id=1tNREGwRdUv38aFhIF4_gRoGv0L2nZGWZ"
+                style={{ color: "#8F8F8F" }}
+              >
+                all user flows
+              </a>
+            </div>
           </div>
           <br /> <br />{" "}
           <hr
@@ -353,7 +463,7 @@ export default function Soundspaceux() {
             </h4>
 
             <div style={{ overflow: "auto" }}>
-              <div style={{ float: "right", marginRight: "150px" }}>
+              <div style={{ float: "right", marginRight: "5%" }}>
                 <img
                   src="/images/site_map.png"
                   className="visibleImage"
@@ -371,6 +481,22 @@ export default function Soundspaceux() {
                     widthType={"site_map"}
                   />
                 )}
+                <br />
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "interLight",
+                    color: "#8F8F8F",
+                  }}
+                >
+                  Click here to view{" "}
+                  <a
+                    href="https://drive.google.com/open?id=1tNREGwRdUv38aFhIF4_gRoGv0L2nZGWZ"
+                    style={{ color: "#8F8F8F" }}
+                  >
+                    site map
+                  </a>
+                </div>
               </div>
 
               <p style={{ paddingTop: "100px", width: "40%" }}>
@@ -408,16 +534,18 @@ export default function Soundspaceux() {
               aesthetics at this stage, but rather just making sure the user
               flows were being conveyed.
             </p>
-
-            <img
-              src="/images/lofi_prototype.png"
-              className="visibleImage"
-              width="700px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(6);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/lofi_prototype.png"
+                className="visibleImage"
+                width="700px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(6);
+                }}
+              />
+            </div>
             {imgIndex === 6 && (
               <PopUpModal
                 open={open}
@@ -426,6 +554,22 @@ export default function Soundspaceux() {
                 widthType={"lofi_prototype"}
               />
             )}
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://www.figma.com/file/pYb3EdCEB7KUmwmF56leRN/Project1_WireFrames-v2?node-id=0%3A1"
+                style={{ color: "#8F8F8F" }}
+              >
+                Lo-Fi Prototypes
+              </a>
+            </div>
           </div>
           <br /> <br />{" "}
           <hr
@@ -447,7 +591,7 @@ export default function Soundspaceux() {
             </h4>
 
             <div style={{ overflow: "auto" }}>
-              <div style={{ float: "right", marginRight: "80px" }}>
+              <div style={{ float: "right", marginRight: "5%" }}>
                 <img
                   src="/images/brand_id.png"
                   className="visibleImage"
@@ -465,6 +609,22 @@ export default function Soundspaceux() {
                     widthType={"brand_id"}
                   />
                 )}
+                <br />
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "interLight",
+                    color: "#8F8F8F",
+                  }}
+                >
+                  Click here to view{" "}
+                  <a
+                    href="https://www.figma.com/file/vpycuaMgIDLSNrgu3M5RNh/Soundspace-Style-Guide-v2?node-id=0%3A1"
+                    style={{ color: "#8F8F8F" }}
+                  >
+                    view style guide
+                  </a>
+                </div>
               </div>
 
               <p style={{ paddingTop: "100px", width: "40%" }}>
@@ -499,7 +659,7 @@ export default function Soundspaceux() {
             </h4>
 
             <div style={{ overflow: "auto" }}>
-              <div style={{ float: "left", marginRight: "" }}>
+              <div style={{ float: "left", marginRight: "5%" }}>
                 <img
                   src="/images/highfi_prototype.png"
                   className="visibleImage"
@@ -517,6 +677,22 @@ export default function Soundspaceux() {
                     widthType={"hifi"}
                   />
                 )}
+                <br />
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "interLight",
+                    color: "#8F8F8F",
+                  }}
+                >
+                  Click here to view{" "}
+                  <a
+                    href="https://www.figma.com/file/yHLoD6zlEfw2glXOcl0Wg9/Project1---High-Fidelity-Mockups-v4?node-id=0%3A1"
+                    style={{ color: "#8F8F8F" }}
+                  >
+                    Hi-Fi Prototypes
+                  </a>
+                </div>
               </div>
 
               <p style={{ float: "right", paddingTop: "100px", width: "40%" }}>
@@ -552,16 +728,18 @@ export default function Soundspaceux() {
               improvement. The tests led to changes throughout my product that
               greatly improved it.
             </p>
-
-            <img
-              src="/images/user_testing.png"
-              className="visibleImage"
-              width="1000px"
-              alt=""
-              onClick={() => {
-                setOpen(true), setImgIndex(9);
-              }}
-            />
+            <br />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+              <img
+                src="/images/user_testing.png"
+                className="visibleImage"
+                width="1000px"
+                alt=""
+                onClick={() => {
+                  setOpen(true), setImgIndex(9);
+                }}
+              />
+            </div>
             {imgIndex === 9 && (
               <PopUpModal
                 open={open}
@@ -570,6 +748,38 @@ export default function Soundspaceux() {
                 widthType={"user_testing"}
               />
             )}
+
+            <br />
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://invis.io/4AUF1VYM2ND"
+                style={{ color: "#8F8F8F" }}
+              >
+                Prototype
+              </a>
+            </div>
+            <div
+              style={{
+                fontSize: "14px",
+                fontFamily: "interLight",
+                color: "#8F8F8F",
+              }}
+            >
+              Click here to view{" "}
+              <a
+                href="https://drive.google.com/open?id=1SUVt78bVzQbaEf9jKPN_G4v-a_2S9fCa"
+                style={{ color: "#8F8F8F" }}
+              >
+                user testing report
+              </a>
+            </div>
           </div>
           <br /> <br />{" "}
           <hr
@@ -608,6 +818,22 @@ export default function Soundspaceux() {
                     widthType={"final"}
                   />
                 )}
+                <br />
+                <div
+                  style={{
+                    fontSize: "14px",
+                    fontFamily: "interLight",
+                    color: "#8F8F8F",
+                  }}
+                >
+                  Click here to view{" "}
+                  <a
+                    href="https://drive.google.com/open?id=1SUVt78bVzQbaEf9jKPN_G4v-a_2S9fCa"
+                    style={{ color: "#8F8F8F" }}
+                  >
+                    full User Testing Report
+                  </a>
+                </div>
               </div>
 
               <p style={{ paddingTop: "100px", width: "40%" }}>
