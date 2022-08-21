@@ -22,17 +22,67 @@ export default function Nav() {
   //   }
   // }, []);
 
+  // return (
+  //   <div>
+  // <ul>
+  //   <li>
+  //     <a href="#">About</a>
+  //   </li>
+  //   <li>
+  //     <button onClick={() => navigateToHome()}>Projects</button>
+  //     {/* <button onClick={navigateToHome}>Projects</button> */}
+  //   </li>
+  // </ul>
+  //   </div>
+  // );
+
   return (
-    <div>
-      <ul>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <button onClick={() => navigateToHome()}>Projects</button>
-          {/* <button onClick={navigateToHome}>Projects</button> */}
-        </li>
-      </ul>
+    <div id="container" style={{}}>
+      <div class="grid-container" style={{ height: "100%" }}>
+        <div
+          style={{
+            height: "100%",
+          }}
+          class="grid-item grid-item-1"
+        >
+          <ul style={{ display: "table", margin: "0 auto" }}>
+            <li>
+              <a href="#">Alex Buchanan</a>
+            </li>
+          </ul>
+        </div>
+        <div class="grid-item grid-item-2"></div>
+        <div
+          class="grid-item grid-item-3"
+          style={{
+            height: "100%",
+          }}
+        >
+          <ul style={{ display: "table", margin: "0 auto" }}>
+            <li>
+              <button
+                onClick={() => navigateToHome()}
+                style={{
+                  color: "inherit",
+                  border: "none",
+                  padding: "14px 16px 14px 16px",
+                  font: "inherit",
+                  outline: "inherit",
+                  cursor: "pointer",
+                  marginRight: "10px",
+                  background: "inherit",
+                }}
+              >
+                Projects
+              </button>
+              {/* <button onClick={navigateToHome}>Projects</button> */}
+            </li>
+            <li>
+              <a href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }

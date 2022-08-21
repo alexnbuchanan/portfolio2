@@ -7,8 +7,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Home(props) {
   const backColor = useRef();
-  const projectText = useRef();
+  // const projectText = useRef();
   const location = useLocation();
+
+  console.log("LOCATION", location.state?.scrolled);
 
   useEffect(() => {
     gsap.to("body", {
@@ -17,7 +19,7 @@ export default function Home(props) {
         toggleActions: "play pause resume reverse",
         trigger: backColor.current,
         start: "top center",
-        markers: true,
+        markers: false,
       },
     });
     gsap.to(".fontStyle", {
@@ -103,12 +105,12 @@ export default function Home(props) {
                     fontFamily: "ptMono",
                   }}
                 >
-                  TEST TEST
+                  ALEX BUCHANAN
                 </u>
                 <img src="/images/zlatan.jpg" />
               </a>
             </div>{" "}
-            TEST TEST TEST TEST TEST TEST
+            IS A WEB DEVELOPER & UX RESEARCHER BASED IN
             <br />
             <div className="item2" style={{ display: "inline" }}>
               <a
