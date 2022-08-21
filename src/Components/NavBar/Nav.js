@@ -36,6 +36,13 @@ export default function Nav() {
   //   </div>
   // );
 
+  const changeRoute = (event) => {
+    //document.body.style.backgroundColor = "#FFFFFF";
+    //history.push("/" + route);
+    clearElements();
+    window.scrollTo(0, 0);
+  };
+
   return (
     <div id="container" style={{}}>
       <div class="grid-container" style={{ height: "100%" }}>
@@ -46,9 +53,15 @@ export default function Nav() {
           class="grid-item grid-item-1"
         >
           <ul style={{ display: "table", margin: "0 auto" }}>
-            <li>
-              <a href="#">Alex Buchanan</a>
-            </li>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="/"
+              onClick={changeRoute}
+            >
+              <li>
+                <a>Alex Buchanan</a>
+              </li>
+            </Link>
           </ul>
         </div>
         <div class="grid-item grid-item-2"></div>
@@ -77,9 +90,15 @@ export default function Nav() {
               </button>
               {/* <button onClick={navigateToHome}>Projects</button> */}
             </li>
-            <li>
-              <a href="#">About</a>
-            </li>
+            <Link
+              style={{ textDecoration: "none", color: "black" }}
+              to="/about"
+              onClick={changeRoute}
+            >
+              <li>
+                <a>About</a>
+              </li>
+            </Link>
           </ul>
         </div>
       </div>

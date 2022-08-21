@@ -34,6 +34,13 @@ export default function Soundspace() {
               Details such as retrieving GPS coordinate data, adding pins, and
               customizing the map was a challenge. However it's rewarding to see
               my UX project come to life as a functioning prototype.
+              <br />
+              <br />
+              Although the app isn't a 1 to 1 replica of the original UI design,
+              I'm still happy with the outcome. I hope to contiune to develop my
+              design coding skills by contiuning to work on this app by refining
+              the UI to more closely resemble the original high fidelity
+              prototype.
             </p>
           </div>
 
