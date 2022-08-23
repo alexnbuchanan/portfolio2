@@ -3,6 +3,8 @@ import "./Home.css";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useLocation } from "react-router-dom";
+import { useMediaQuery, useTheme } from "@material-ui/core";
+import ProjectsMobile from "./ProjectsMobile.js";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Home(props) {
@@ -19,7 +21,7 @@ export default function Home(props) {
         toggleActions: "play pause resume reverse",
         trigger: backColor.current,
         start: "top center",
-        markers: false,
+        markers: true,
       },
     });
     gsap.to(".fontStyle", {
@@ -85,12 +87,14 @@ export default function Home(props) {
   //     });
   //   }
   // };
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("xs"));
 
   return (
     <div>
       <div id="container" style={{ height: "calc(100vh - 50px)" }}>
         <div class="contents" style={{ height: "100%" }}>
-          <div className="mainText">
+          <div className={isMatch ? "mainText-Mobile" : "mainText"}>
             <div className="item1" style={{ display: "inline" }}>
               <a
                 aria-label="link-1"
@@ -110,8 +114,7 @@ export default function Home(props) {
                 <img src="/images/zlatan.jpg" />
               </a>
             </div>{" "}
-            IS A WEB DEVELOPER & UX RESEARCHER BASED IN
-            <br />
+            IS A WEB DEVELOPER & UX RESEARCHER BASED IN <br />
             <div className="item2" style={{ display: "inline" }}>
               <a
                 aria-label="link-1"
@@ -136,38 +139,74 @@ export default function Home(props) {
         </div>
       </div>
 
-      <div ref={backColor} id="projects">
-        <Link
-          style={{ textDecoration: "none", color: "black" }}
-          to="/soundspace"
-          onClick={changeRoute}
-        >
-          <h2 className="fontStyle">Soundspace App</h2>
-        </Link>
+      {isMatch ? (
+        <div ref={backColor} id="projects">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/soundspace"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyleMobile">Soundspace App</h2>
+          </Link>
 
-        <Link
-          style={{ textDecoration: "none", color: "black" }}
-          to="/soundspaceux"
-          onClick={changeRoute}
-        >
-          <h2 className="fontStyle"> Soundspace UX/UI</h2>
-        </Link>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/soundspaceux"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyleMobile"> Soundspace UX/UI</h2>
+          </Link>
 
-        <Link
-          style={{ textDecoration: "none", color: "black" }}
-          to="/social"
-          onClick={changeRoute}
-        >
-          <h2 className="fontStyle">Social Media App</h2>
-        </Link>
-        <Link
-          style={{ textDecoration: "none", color: "black" }}
-          to="/ecomm"
-          onClick={changeRoute}
-        >
-          <h2 className="fontStyle">Ecommerce App</h2>
-        </Link>
-      </div>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/social"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyleMobile">Social Media App</h2>
+          </Link>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/ecomm"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyleMobile">Ecommerce App</h2>
+          </Link>
+        </div>
+      ) : (
+        // <ProjectsMobile backColor={backColor} changeRoute={changeRoute} />
+        <div ref={backColor} id="projects">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/soundspace"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyle">Soundspace App</h2>
+          </Link>
+
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/soundspaceux"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyle"> Soundspace UX/UI</h2>
+          </Link>
+
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/social"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyle">Social Media App</h2>
+          </Link>
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/ecomm"
+            onClick={changeRoute}
+          >
+            <h2 className="fontStyle">Ecommerce App</h2>
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

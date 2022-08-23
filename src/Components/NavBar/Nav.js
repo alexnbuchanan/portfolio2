@@ -3,6 +3,7 @@ import "./Nav.css";
 // import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 import { Routes, Route, useNavigate } from "react-router-dom";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 export default function Nav() {
   const navigate = useNavigate();
@@ -43,23 +44,30 @@ export default function Nav() {
     window.scrollTo(0, 0);
   };
 
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <div id="container" style={{}}>
-      <div class="grid-container" style={{ height: "100%" }}>
+      <div
+        class={isMatch ? "grid-container-nav-mobile" : "grid-container-nav"}
+        style={{ height: "100%" }}
+      >
         <div
           style={{
             height: "100%",
           }}
           class="grid-item grid-item-1"
         >
-          <ul style={{ display: "table", margin: "0 auto" }}>
-            <Link
-              style={{ textDecoration: "none", color: "black" }}
-              to="/"
-              onClick={changeRoute}
-            >
+          <ul
+            style={{
+              display: "table",
+              margin: "0 auto",
+            }}
+          >
+            <Link to="/" onClick={changeRoute}>
               <li>
-                <a>Alex Buchanan</a>
+                <a class="alex-logo">Alex Buchanan</a>
               </li>
             </Link>
           </ul>
