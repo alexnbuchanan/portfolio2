@@ -12,7 +12,6 @@ export default function PopUpModal({ open, handleClose, img, widthType }) {
 
   // console.log("SAASDASDAS", widthType);
   const widthSwitch = (prop) => {
-    debugger;
     switch (prop) {
       case "site_map":
         return "40%";

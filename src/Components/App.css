@@ -38,3 +38,7 @@
 }
 
 #divContainer > * { position:relative;  }
+
+#divContainer::before {
+  position: fixed !important;
+}

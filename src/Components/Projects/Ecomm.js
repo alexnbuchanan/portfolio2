@@ -1,10 +1,16 @@
 import React from "react";
 import "./Projects.css";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 export default function Ecomm() {
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div id="container" style={{}}>
-      <div class="grid-container" style={{ height: "100%" }}>
+      <div
+        class={isMatch ? "grid-container-mobile" : "grid-container"}
+        style={{ height: "100%" }}
+      >
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
           <h1

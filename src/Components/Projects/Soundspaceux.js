@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 import PopUpModal from "./PopUpModal.js";
+import { useMediaQuery, useTheme } from "@material-ui/core";
 
 export default function Soundspaceux() {
   const [open, setOpen] = useState(false);
   const handleClose = () => setOpen(false);
   const [imgIndex, setImgIndex] = useState("");
 
+  const theme = useTheme();
+  const isMatch = useMediaQuery(theme.breakpoints.down("xs"));
+
   return (
     <div id="container" style={{}}>
-      <div class="grid-container" style={{ height: "100%" }}>
+      <div
+        class={isMatch ? "grid-container-mobile" : "grid-container"}
+        style={{ height: "100%" }}
+      >
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
           <h1
-            style={{
-              fontFamily: "interMedium",
-              fontSize: "75px",
-              marginTop: "100px",
-            }}
+            // style={{
+            //   fontFamily: "interMedium",
+            //   fontSize: "75px",
+            //   marginTop: "100px",
+            // }}
+            class={isMatch ? "h1_tag_mobile" : "h1_tag"}
           >
             Soundspace
           </h1>
@@ -71,7 +79,10 @@ export default function Soundspaceux() {
           <br />
           <div>
             <div style={{ overflow: "auto" }}>
-              <div style={{ float: "right", marginRight: "150px" }}>
+              <div
+                class={isMatch ? "img_phone_mobile" : "img_phone"}
+                // style={{ float: "right", marginRight: "150px" }}
+              >
                 <img
                   src="/images/solution2.png"
                   className="visibleImage"
@@ -163,7 +174,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/competitive_analysis2.png"
                 className="visibleImage"
-                width="900px"
+                width={isMatch ? "100%" : "900px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(0);
@@ -229,7 +240,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/user_surveys.png"
                 className="visibleImage"
-                width="800px"
+                width={isMatch ? "100%" : "800px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(1);
@@ -290,7 +301,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/user_personas.png"
                 className="visibleImage"
-                width="900px"
+                width={isMatch ? "100%" : "900px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(2);
@@ -352,7 +363,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/user_stories.png"
                 className="visibleImage"
-                width="800px"
+                width={isMatch ? "100%" : "800px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(3);
@@ -412,7 +423,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/user_flows.png"
                 className="visibleImage"
-                width="900px"
+                width={isMatch ? "100%" : "900px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(4);
@@ -467,7 +478,7 @@ export default function Soundspaceux() {
                 <img
                   src="/images/site_map.png"
                   className="visibleImage"
-                  width="500px"
+                  width={isMatch ? "100%" : "500px"}
                   alt=""
                   onClick={() => {
                     setOpen(true), setImgIndex(5);
@@ -482,13 +493,7 @@ export default function Soundspaceux() {
                   />
                 )}
                 <br />
-                <div
-                  style={{
-                    fontSize: "14px",
-                    fontFamily: "interLight",
-                    color: "#8F8F8F",
-                  }}
-                >
+                <div class={isMatch ? "click_here_mobile" : "click_here"}>
                   Click here to view{" "}
                   <a
                     href="https://drive.google.com/open?id=1tNREGwRdUv38aFhIF4_gRoGv0L2nZGWZ"
@@ -499,7 +504,7 @@ export default function Soundspaceux() {
                 </div>
               </div>
 
-              <p style={{ paddingTop: "100px", width: "40%" }}>
+              <p class={isMatch ? "site_map_text_mobile" : "site_map_text"}>
                 With the user stories as guidance, I created a site map to
                 outline each screen of the design. I made sure that each user
                 story was represented by a screen. <br />
@@ -539,7 +544,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/lofi_prototype.png"
                 className="visibleImage"
-                width="700px"
+                width={isMatch ? "100%" : "700px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(6);
@@ -595,7 +600,7 @@ export default function Soundspaceux() {
                 <img
                   src="/images/brand_id.png"
                   className="visibleImage"
-                  width="500px"
+                  width={isMatch ? "100%" : "500px"}
                   alt=""
                   onClick={() => {
                     setOpen(true), setImgIndex(7);
@@ -610,13 +615,7 @@ export default function Soundspaceux() {
                   />
                 )}
                 <br />
-                <div
-                  style={{
-                    fontSize: "14px",
-                    fontFamily: "interLight",
-                    color: "#8F8F8F",
-                  }}
-                >
+                <div class={isMatch ? "click_here_mobile" : "click_here"}>
                   Click here to view{" "}
                   <a
                     href="https://www.figma.com/file/vpycuaMgIDLSNrgu3M5RNh/Soundspace-Style-Guide-v2?node-id=0%3A1"
@@ -627,7 +626,7 @@ export default function Soundspaceux() {
                 </div>
               </div>
 
-              <p style={{ paddingTop: "100px", width: "40%" }}>
+              <p class={isMatch ? "site_map_text_mobile" : "site_map_text"}>
                 With the lo-fi designs in place, I needed a brand identity that
                 would inform the final design of the prototype. As such, I
                 created a style guide which outlined the design standards for
@@ -663,7 +662,7 @@ export default function Soundspaceux() {
                 <img
                   src="/images/highfi_prototype.png"
                   className="visibleImage"
-                  width="500px"
+                  width={isMatch ? "100%" : "500px"}
                   alt=""
                   onClick={() => {
                     setOpen(true), setImgIndex(8);
@@ -678,13 +677,7 @@ export default function Soundspaceux() {
                   />
                 )}
                 <br />
-                <div
-                  style={{
-                    fontSize: "14px",
-                    fontFamily: "interLight",
-                    color: "#8F8F8F",
-                  }}
-                >
+                <div class={isMatch ? "click_here_mobile" : "click_here"}>
                   Click here to view{" "}
                   <a
                     href="https://www.figma.com/file/yHLoD6zlEfw2glXOcl0Wg9/Project1---High-Fidelity-Mockups-v4?node-id=0%3A1"
@@ -695,7 +688,7 @@ export default function Soundspaceux() {
                 </div>
               </div>
 
-              <p style={{ float: "right", paddingTop: "100px", width: "40%" }}>
+              <p class={isMatch ? "hi_fi_proto_mobile" : "hi_fi_proto"}>
                 With the style guide in hand, I was able to transform the lo-fi
                 designs into fully realized designs. <br />
                 <br />
@@ -733,7 +726,7 @@ export default function Soundspaceux() {
               <img
                 src="/images/user_testing.png"
                 className="visibleImage"
-                width="1000px"
+                width={isMatch ? "100%" : "1000px"}
                 alt=""
                 onClick={() => {
                   setOpen(true), setImgIndex(9);
@@ -800,11 +793,11 @@ export default function Soundspaceux() {
               Final Updates
             </h4>
             <div style={{ overflow: "auto" }}>
-              <div style={{ float: "right", marginRight: "80px" }}>
+              <div class={isMatch ? "final_update_mobile" : "final_update"}>
                 <img
                   src="/images/final.png"
                   className="visibleImage"
-                  width="500px"
+                  width={isMatch ? "100%" : "500px"}
                   alt=""
                   onClick={() => {
                     setOpen(true), setImgIndex(10);
@@ -836,7 +829,11 @@ export default function Soundspaceux() {
                 </div>
               </div>
 
-              <p style={{ paddingTop: "100px", width: "40%" }}>
+              <p
+                class={
+                  isMatch ? "final_update_text_mobile" : "final_update_text"
+                }
+              >
                 After conducting user tests, I had enough feedback to make my
                 final updates. Some of the biggest updates included*:
                 <br />

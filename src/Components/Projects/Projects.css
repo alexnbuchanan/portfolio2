@@ -7,5 +7,94 @@ body{
 
 .grid-container {
     display: grid;
+
     grid-template-columns: 1fr 4fr 1fr
+}
+
+.grid-container-mobile {
+  display: block;
+  grid-template-columns: fr fr fr;
+  padding: 0px 5px 0px 5px
+}
+
+/* .testNow{
+    font-family: "interMedium";
+    font-size: 200px !important;
+   margin-top: 100px;
+   color: green;
+} */
+
+.h1_tag_mobile{
+  font-family: "interMedium";
+  font-size: 52px;
+ margin-top: 100px;
+}
+
+.h1_tag{
+  font-family: "interMedium";
+  font-size: 72px; 
+ margin-top: 100px;
+}
+
+.img_phone{
+  float: right;
+  margin-right: 150px 
+}
+
+.img_phone_mobile{
+  text-align: center;
+}
+
+.site_map_text{
+  padding-top: 100px;
+  width: 40%
+}
+
+.site_map_text_mobile{
+  padding-top: 100px;
+  width: 100%
+}
+
+.hi_fi_proto{
+  float: right; 
+  padding-top: 100px;
+  width: 40%
+}
+
+.hi_fi_proto_mobile{
+  /* padding-top: 300px; */
+  width: 100%
+}
+
+.final_update{
+  float: right;
+  margin-right: 80px
+}
+
+.final_update_mobile{
+
+}
+
+.final_update_text{
+  padding-top: 100px; 
+  width: 40% 
+}
+
+.final_update_text_mobile{
+
+}
+
+.click_here{
+
+    font-size: 14px;
+    font-family: "interLight";
+    color: #8F8F8F
+
+}
+
+.click_here_mobile{
+  font-size: 14px;
+  font-family: "interLight";
+  color: #8F8F8F;
+  margin-bottom: 20px
 }

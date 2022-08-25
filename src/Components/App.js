@@ -33,6 +33,7 @@ function App() {
           <Route path="/social" element={<Social />} />
           <Route path="/soundspace" element={<Soundspace />} />
           <Route path="/soundspaceux" element={<Soundspaceux />} />
+
           <Route path="/about" element={<About />} />
           <Route path="/" exact element={<Home />} />
         </Routes>
