@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import ProjectsMobile from "./ProjectsMobile.js";
@@ -16,6 +16,9 @@ export default function Home(props) {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
+    setTimeout(() => {
+      
+   
     gsap.to("body", {
       backgroundColor: "black",
       scrollTrigger: {
@@ -33,6 +36,8 @@ export default function Home(props) {
         start: "top center",
       },
     });
+
+  }, 3000);
 
     if (location.state?.scrolled) {
       scrollFun("projects");
@@ -94,7 +99,7 @@ export default function Home(props) {
   return (
     <div>
       <div id="container" style={{ height: "calc(100vh - 50px)" }}>
-        <div class="contents" style={{ height: "100%" }}>
+        <div className=""="contents" style={{ height: "100%" }}>
           <div className={isMatch ? "mainText-Mobile" : "mainText"}>
             <div className="item1" style={{ display: "inline" }}>
               <a
