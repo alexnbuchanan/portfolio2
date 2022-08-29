@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import ProjectsMobile from "./ProjectsMobile.js";
@@ -14,27 +15,23 @@ export default function Home(props) {
   console.log("LOCATION", location.state?.scrolled);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
-
-    setTimeout(() => {
-      gsap.to("body", {
-        backgroundColor: "black",
-        scrollTrigger: {
-          toggleActions: "play pause resume reverse",
-          trigger: backColor.current,
-          start: "top center",
-          markers: true,
-        },
-      });
-      gsap.to(".fontStyle", {
-        color: "#f9cdcd",
-        scrollTrigger: {
-          toggleActions: "play pause resume reverse",
-          trigger: backColor.current,
-          start: "top center",
-        },
-      });
-    }, 3000);
+    gsap.to("body", {
+      backgroundColor: "black",
+      scrollTrigger: {
+        toggleActions: "play pause resume reverse",
+        trigger: backColor.current,
+        start: "top center",
+        markers: true,
+      },
+    });
+    gsap.to(".fontStyle", {
+      color: "#f9cdcd",
+      scrollTrigger: {
+        toggleActions: "play pause resume reverse",
+        trigger: backColor.current,
+        start: "top center",
+      },
+    });
 
     if (location.state?.scrolled) {
       scrollFun("projects");
