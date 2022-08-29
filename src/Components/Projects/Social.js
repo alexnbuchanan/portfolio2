@@ -12,18 +12,10 @@ export default function Social() {
       >
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
-          <h1
-            style={{
-              fontFamily: "interMedium",
-              fontSize: "75px",
-              marginTop: "100px",
-            }}
-          >
-            Social Media App
-          </h1>
+          <h1 class={isMatch ? "h1_tag_mobile" : "h1_tag"}>Social Media App</h1>
 
           <div>
-            <p style={{ width: "60%" }}>
+            <p class={isMatch ? "project_text_mobile" : "project_text"}>
               I built a social media app which allows users to create an
               authenticated profile and post to a feed. Users also have the
               ability to upload photos as well as like and comment on other

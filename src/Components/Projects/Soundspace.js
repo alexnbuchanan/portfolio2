@@ -4,7 +4,6 @@ import { useMediaQuery, useTheme } from "@material-ui/core";
 export default function Soundspace() {
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("xs"));
-  console.log(theme, isMatch);
 
   return (
     <div id="container">
@@ -14,18 +13,10 @@ export default function Soundspace() {
       >
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
-          <h1
-            style={{
-              fontFamily: "interMedium",
-              fontSize: "75px",
-              marginTop: "100px",
-            }}
-          >
-            Soundspace
-          </h1>
+          <h1 class={isMatch ? "h1_tag_mobile" : "h1_tag"}>Soundspace</h1>
 
           <div>
-            <p style={{ width: "60%" }}>
+            <p class={isMatch ? "project_text_mobile" : "project_text"}>
               Soundspace is an app that provides an online rental marketplace
               for hosting and booking spaces with musical instruments and
               equipment.

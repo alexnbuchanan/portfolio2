@@ -13,18 +13,10 @@ export default function Ecomm() {
       >
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
-          <h1
-            style={{
-              fontFamily: "interMedium",
-              fontSize: "75px",
-              marginTop: "100px",
-            }}
-          >
-            Ecommerce App
-          </h1>
+          <h1 class={isMatch ? "h1_tag_mobile" : "h1_tag"}>Ecommerce App</h1>
 
           <div>
-            <p style={{ width: "60%" }}>
+            <p class={isMatch ? "project_text_mobile" : "project_text"}>
               I built a e-commerce store connected with Stripe. In the process
               of building this app, I learned how to utilize local storage and
               params to route between items. I also gained experience creating a

@@ -98,3 +98,11 @@ body{
   color: #8F8F8F;
   margin-bottom: 20px
 }
+
+.project_text{
+width: 60%
+}
+
+.project_text_mobile{
+  width: 100%
+}

@@ -111,7 +111,7 @@ export default function Home(props) {
                 >
                   ALEX BUCHANAN
                 </u>
-                <img src="/images/zlatan.jpg" />
+                <img src="/images/grand_canyon.png" />
               </a>
             </div>{" "}
             IS A WEB DEVELOPER & UX RESEARCHER BASED IN <br />
