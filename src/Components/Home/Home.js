@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import ProjectsMobile from "./ProjectsMobile.js";
@@ -15,6 +14,8 @@ export default function Home(props) {
   console.log("LOCATION", location.state?.scrolled);
 
   useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     gsap.to("body", {
       backgroundColor: "black",
       scrollTrigger: {
