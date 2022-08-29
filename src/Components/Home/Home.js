@@ -21,7 +21,7 @@ export default function Home(props) {
         toggleActions: "play pause resume reverse",
         trigger: backColor.current,
         start: "top center",
-        markers: true,
+        markers: false,
       },
     });
     gsap.to(".fontStyle", {
