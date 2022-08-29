@@ -6,6 +6,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import ProjectsMobile from "./ProjectsMobile.js";
 
+gsap.registerPlugin(ScrollTrigger);
 export default function Home(props) {
   const backColor = useRef();
   // const projectText = useRef();
@@ -14,14 +15,13 @@ export default function Home(props) {
   console.log("LOCATION", location.state?.scrolled);
 
   useEffect(() => {
-    gsap.registerPlugin(ScrollTrigger);
     gsap.to("body", {
       backgroundColor: "black",
       scrollTrigger: {
         toggleActions: "play pause resume reverse",
         trigger: backColor.current,
         start: "top center",
-        markers: false,
+        markers: true,
       },
     });
     gsap.to(".fontStyle", {
