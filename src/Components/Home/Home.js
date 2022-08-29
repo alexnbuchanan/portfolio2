@@ -13,6 +13,7 @@ export default function Home(props) {
   const location = useLocation();
 
   console.log("LOCATION", location.state?.scrolled);
+  console.log("ScrollTrigger", ScrollTrigger)
 
   useEffect(() => {
     gsap.to("body", {
