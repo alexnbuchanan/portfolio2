@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import ProjectsMobile from "./ProjectsMobile.js";
