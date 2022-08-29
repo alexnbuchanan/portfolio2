@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
-import { gsap } from "gsap";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { Link, useLocation } from "react-router-dom";
