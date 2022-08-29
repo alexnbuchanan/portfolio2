@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./Home.css";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { gsap, ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger); 
 import { Link, useLocation } from "react-router-dom";
 import { useMediaQuery, useTheme } from "@material-ui/core";
 import ProjectsMobile from "./ProjectsMobile.js";
@@ -13,6 +13,7 @@ export default function Home(props) {
   const location = useLocation();
 
   console.log("LOCATION", location.state?.scrolled);
+  console.log("ScrollTrigger", ScrollTrigger)
 
   useEffect(() => {
     gsap.to("body", {
@@ -21,7 +22,7 @@ export default function Home(props) {
         toggleActions: "play pause resume reverse",
         trigger: backColor.current,
         start: "top center",
-        markers: true,
+        markers: false,
       },
     });
     gsap.to(".fontStyle", {
