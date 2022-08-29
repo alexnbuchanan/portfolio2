@@ -17,27 +17,24 @@ export default function Home(props) {
     gsap.registerPlugin(ScrollTrigger);
 
     setTimeout(() => {
-      
-   
-    gsap.to("body", {
-      backgroundColor: "black",
-      scrollTrigger: {
-        toggleActions: "play pause resume reverse",
-        trigger: backColor.current,
-        start: "top center",
-        markers: true,
-      },
-    });
-    gsap.to(".fontStyle", {
-      color: "#f9cdcd",
-      scrollTrigger: {
-        toggleActions: "play pause resume reverse",
-        trigger: backColor.current,
-        start: "top center",
-      },
-    });
-
-  }, 3000);
+      gsap.to("body", {
+        backgroundColor: "black",
+        scrollTrigger: {
+          toggleActions: "play pause resume reverse",
+          trigger: backColor.current,
+          start: "top center",
+          markers: true,
+        },
+      });
+      gsap.to(".fontStyle", {
+        color: "#f9cdcd",
+        scrollTrigger: {
+          toggleActions: "play pause resume reverse",
+          trigger: backColor.current,
+          start: "top center",
+        },
+      });
+    }, 3000);
 
     if (location.state?.scrolled) {
       scrollFun("projects");
@@ -99,7 +96,7 @@ export default function Home(props) {
   return (
     <div>
       <div id="container" style={{ height: "calc(100vh - 50px)" }}>
-        <div className=""="contents" style={{ height: "100%" }}>
+        <div className="contents" style={{ height: "100%" }}>
           <div className={isMatch ? "mainText-Mobile" : "mainText"}>
             <div className="item1" style={{ display: "inline" }}>
               <a
