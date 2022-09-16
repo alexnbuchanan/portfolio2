@@ -14,7 +14,6 @@ export default function Soundspace() {
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
           <h1 class={isMatch ? "h1_tag_mobile" : "h1_tag"}>Soundspace</h1>
-
           <div>
             <p class={isMatch ? "project_text_mobile" : "project_text"}>
               Soundspace is an app that provides an online rental marketplace
@@ -42,16 +41,22 @@ export default function Soundspace() {
               prototype.
             </p>
           </div>
-
           <div>
             <h2 style={{ fontFamily: "interMedium" }}>Technologies Used</h2>
             <p>Firebase Realtime Database</p>
+            <p>node.js</p>
             <p>Mapbox</p>
             <p>Cloudinary</p>
             <p>Material UI</p>
           </div>
-
-          <h2 style={{ fontFamily: "interMedium" }}>Link</h2>
+          <h2 style={{ fontFamily: "interMedium" }}>Links</h2>
+          <a href="https://celadon-cupcake-702737.netlify.app/">
+            Final project
+          </a>
+          <br /> <br />
+          <a href="https://github.com/alexnbuchanan/map_client">Github</a>
+          <br />
+          <br />
         </div>
         <div class="grid-item grid-item-3"></div>
       </div>

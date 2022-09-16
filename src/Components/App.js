@@ -8,6 +8,7 @@ import Ecomm from "./Projects/Ecomm";
 import Social from "./Projects/Social";
 import Soundspace from "./Projects/Soundspace";
 import Soundspaceux from "./Projects/Soundspaceux";
+import { Helmet } from "react-helmet";
 
 function App() {
   useEffect(() => {
@@ -26,6 +27,12 @@ function App() {
   return (
     <Router>
       <div id="divContainer">
+        <Helmet>
+          <meta charSet="utf-8" />
+          <title>Alex Buchanan</title>
+          <link rel="canonical" href="http://mysite.com/example" />
+          <meta name="description" content="Alex Buchanan portfolio page" />
+        </Helmet>
         <Nav />
 
         <Routes>

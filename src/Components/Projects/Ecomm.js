@@ -14,7 +14,6 @@ export default function Ecomm() {
         <div style={{ height: "100%" }} class="grid-item grid-item-1"></div>
         <div class="grid-item grid-item-2">
           <h1 class={isMatch ? "h1_tag_mobile" : "h1_tag"}>Ecommerce App</h1>
-
           <div>
             <p class={isMatch ? "project_text_mobile" : "project_text"}>
               I built a e-commerce store connected with Stripe. In the process
@@ -35,15 +34,19 @@ export default function Ecomm() {
               sure to do this in subsequent projects.
             </p>
           </div>
-
           <div>
             <h2 style={{ fontFamily: "interMedium" }}>Technologies Used</h2>
             <p>Stripe</p>
             <p>GSAP</p>
             <p>Material UI</p>
+            <p>node.js</p>
           </div>
-
-          <h2 style={{ fontFamily: "interMedium" }}>Link</h2>
+          <h2 style={{ fontFamily: "interMedium" }}>Links</h2>
+          <a href="https://singular-gnome-c073a0.netlify.app/">Final project</a>
+          <br /> <br />
+          <a href="https://github.com/alexnbuchanan/ecomm_client">Github</a>
+          <br />
+          <br />
         </div>
         <div class="grid-item grid-item-3"></div>
       </div>

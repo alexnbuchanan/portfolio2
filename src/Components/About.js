@@ -23,9 +23,10 @@ export default function About() {
               experience in research.
               <br />
               <br />
-              My background in research allows me to ensure that all my projects
-              are built using a data driven design process which eliminates
-              guesswork and keeps the end user always in mind.
+              My background in market and customer insights research allows me
+              to ensure that all my projects are built using a data driven
+              process which eliminates guesswork and keeps the end user always
+              in mind.
             </p>
           </div>
         </div>
