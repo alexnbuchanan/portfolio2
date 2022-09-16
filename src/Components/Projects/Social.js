@@ -36,10 +36,15 @@ export default function Social() {
             <p>Material UI</p>
           </div>
           <h2 style={{ fontFamily: "interMedium" }}>Links</h2>
-          <a href="https://dynamic-cuchufli-630c9a.netlify.app/">
-            Final project
-          </a>
-          <br /> <br />
+          <div>
+            <p>
+              <a href="https://dynamic-cuchufli-630c9a.netlify.app/">
+                Final project
+              </a>{" "}
+              (test@test.com, password: password123)
+            </p>
+          </div>
+
           <a href="https://github.com/alexnbuchanan/social_client">Github</a>
           <br />
           <br />
