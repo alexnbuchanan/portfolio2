@@ -50,10 +50,14 @@ export default function Soundspace() {
             <p>Material UI</p>
           </div>
           <h2 style={{ fontFamily: "interMedium" }}>Links</h2>
-          <a href="https://celadon-cupcake-702737.netlify.app/">
-            Final project
-          </a>
-          <br /> <br />
+          <div>
+            <p>
+              <a href="https://celadon-cupcake-702737.netlify.app/">
+                Final project
+              </a>{" "}
+              (test@test.com, password: password123)
+            </p>
+          </div>
           <a href="https://github.com/alexnbuchanan/map_client">Github</a>
           <br />
           <br />
