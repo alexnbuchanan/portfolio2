@@ -16,7 +16,7 @@ export default function Ecomm() {
           <h1 class={isMatch ? "h1_tag_mobile" : "h1_tag"}>Ecommerce App</h1>
           <div>
             <p class={isMatch ? "project_text_mobile" : "project_text"}>
-              I built a e-commerce store connected with Stripe. In the process
+              I built an e-commerce store connected with Stripe. In the process
               of building this app, I learned how to utilize local storage and
               params to route between items. I also gained experience creating a
               backend server to host the data for the store items.

@@ -716,7 +716,7 @@ export default function Soundspaceux() {
               Prototype and User Testing
             </h4>
             <p>
-              With the hi-fi prototype ready, I conduced usability tests with
+              With the hi-fi prototype ready, I conducted usability tests with
               three respondents. The tests revealed blind spots and areas for
               improvement. The tests led to changes throughout my product that
               greatly improved it.
@@ -845,7 +845,7 @@ export default function Soundspaceux() {
                 <br /> Making the user review section easier to understand
                 <br />
                 <br />
-                Making text and confirmation screens more clear
+                Making text and confirmation screens clearer
                 <br />
                 <br /> However a secondary round of User Testing led to one more
                 major update: increasing the size of buttons (and making some

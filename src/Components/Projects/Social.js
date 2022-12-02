@@ -24,7 +24,7 @@ export default function Social() {
               (Firebase) to manage user data.
               <br /> <br />I used the Cloundinary API to manage photo uploads.
               <br /> <br />
-              This is is the first project in which I used Redux which taught me
+              This is the first project in which I used Redux which taught me
               the importance of centralized state management.
             </p>
           </div>
